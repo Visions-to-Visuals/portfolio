@@ -25,8 +25,8 @@
 }
 
 @font-face {
-  font-family: 'Extrabold';
-  src: url('/fonts/extrabold.ttf') format('truetype');
+  font-family: 'Demibold';
+  src: url('/fonts/demibold.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -41,8 +41,8 @@
 }
 
 @font-face {
-  font-family: 'Demibold';
-  src: url('/fonts/demibold.ttf') format('truetype');
+  font-family: 'Regular';
+  src: url('/fonts/regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -64,4 +64,22 @@ body
 {
   margin: 0;
   padding: 0;
+}
+
+li
+{
+  font-family: "Regular";
+}
+
+
+@layer utilities {
+	ul li {
+		@apply relative tracking-wider;
+	}
+	ul li::after {
+		@apply content-[''] bg-[#000000] h-[2px] w-[0%] left-0 -bottom-[5px] mx-[10%] rounded-3xl absolute duration-300;
+	}
+	ul li:hover::after {
+		@apply w-[80%];
+	}
 }
