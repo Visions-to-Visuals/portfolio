@@ -2,19 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 @font-face {
   font-family: 'Bold';
@@ -71,10 +58,24 @@ li
   font-family: "Regular";
 }
 
+h1
+{
+  font-family: "Demibold"
+}
+
+p
+{
+  font-family: "Regular";
+}
+
+button
+{
+  font-family: "Medium";
+}
 
 @layer utilities {
 	ul li {
-		@apply relative tracking-wider;
+		@apply relative tracking-wide;
 	}
 	ul li::after {
 		@apply content-[''] bg-[#000000] h-[2px] w-[0%] left-0 -bottom-[5px] mx-[10%] rounded-3xl absolute duration-300;
@@ -83,3 +84,9 @@ li
 		@apply w-[80%];
 	}
 }
+
+::selection {
+  /* background: #F5BF49; */
+  color: #EC512B;
+}
+

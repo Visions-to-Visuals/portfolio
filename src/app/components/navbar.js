@@ -19,7 +19,7 @@ export default function Navbar() {
     }
 
     return(
-        <div className='sticky z-[100] transition-top duration-300 tablet-s:top-0'>
+        <>
             {isMobile ? (
             <nav className="h-[6rem] w-[1rem] flex justify-between items-center px-[4vw] tablet-s:h-[4rem] sticky top-10 z-[100]">
                 <div className={`fixed top-0 bottom-0 z-10 bg-accent
@@ -42,10 +42,10 @@ export default function Navbar() {
             </nav>
 
             ):( 
-            <nav className="absolute mx-auto right-0 left-0 py-[2.5rem] px-[5rem]">
+            <nav className="sticky z-[100] top-0 mx-auto right-0 left-0 py-[2.5rem] px-[4rem] bg-white max-w-[110rem]">
 
-                <div className="flex justify-between container">
-                    <Image width={500} height={500} alt="Visions to Visuals Logo" className="w-[20rem]" src="/images/v2vlogo.png"></Image>
+                <div className="flex justify-between">
+                    <Image width={1000} height={100} alt="Visions to Visuals Logo" className="w-[15rem] h-full" src="/images/v2vlogo.png"></Image>
 
                     <ul className="flex items-center justify-center gap-[3rem]">
                         <NavItem text="Home" page=""></NavItem>
@@ -57,6 +57,6 @@ export default function Navbar() {
                 </div>
             </nav>
             )}
-        </div>
+        </>
     )
 }
