@@ -1,25 +1,22 @@
 import "./globals.css";
-import {font} from "next/font";
+import localFont from 'next/font/local'
 
-const gilroyBold = font({
-  src: '/fonts/G-bold.ttf',
-  fontDisplay: 'swap',
-});
-
-const gilroyMedium = font({
-  src: '/fonts/G-medium.ttf',
-  fontDisplay: 'swap',
-});
-
-const gilroyRegular = font({
-  src: '/fonts/G-regular.ttf',
-  fontDisplay: 'swap',
-});
-
-const gilroySemi = font({
-  src: '/fonts/G-semi.ttf',
-  fontDisplay: 'swap',
-});
+const gilroy = localFont({
+  src: [
+    {
+      path: '../../public/fonts/G-bold.ttf',
+    },
+    {
+      path: '../../public/fonts/G-medium.ttf',
+    },
+    {
+      path: '../../public/fonts/G-regular.ttf',
+    },
+    {
+      path: '../../public/fonts/G-semi.ttf',
+    },
+  ],
+})
 
 export const metadata = {
   title: "Visions to Visuals | Website Design and Development",
@@ -28,7 +25,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${gilroyBold.className} ${gilroyMedium.className} ${gilroyRegular.className} ${gilroySemi.className}`}>
+    <html lang="en" className={gilroy.className}>
       <body>{children}</body>
     </html>
   );
