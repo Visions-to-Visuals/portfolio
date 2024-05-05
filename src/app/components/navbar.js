@@ -13,7 +13,7 @@ export default function Navbar() {
     function NavItem( {text, page} ) {
         return (
             <a href={page}>
-                <li className="text-[1.1rem] px-2 cursor-pointer duration-300 hover:text-accent">{text}</li>
+                <li className="text-[1.1rem] px-2 py-1 cursor-pointer duration-300 hover:text-accent">{text}</li>
             </a>
         )
     }
@@ -42,10 +42,10 @@ export default function Navbar() {
             </nav>
 
             ):( 
-            <nav className="sticky z-[100] top-0 mx-auto right-0 left-0 py-[2.5rem] px-[4rem] bg-white max-w-[110rem]">
+            <nav className="sticky z-[100] top-0 mx-auto right-0 left-0 py-[2rem] px-[6rem] max-w-[110rem] bg-white/85 backdrop-blur-md">
 
-                <div className="flex justify-between">
-                    <Image width={1000} height={100} alt="Visions to Visuals Logo" className="w-[15rem] h-full" src="/images/v2vlogo.png"></Image>
+                <div className="flex justify-between items-center">
+                    <Image width={1000} height={100} alt="Visions to Visuals Logo" className="w-[14rem] h-full" src="/images/v2vlogo.png"></Image>
 
                     <ul className="flex items-center justify-center gap-[3rem]">
                         <NavItem text="Home" page=""></NavItem>
