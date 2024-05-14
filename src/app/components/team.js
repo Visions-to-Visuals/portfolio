@@ -30,7 +30,7 @@ export default function Team() {
                 </div>
             </div>
 
-            <div className="flex justify-center mt-[4rem] gap-x-[9rem] items-end">
+            <div className="flex justify-center mt-[4rem] gap-x-[9rem] items-end mb-[16rem]">
                 <p className="text-[1.2rem] w-[45rem]">Since our first project at Modesto Junior College in 2022, our mission has been clear: to create websites that do more than just look good—they make your day easier, more efficient, and successful. Let us elevate your online presence and make an impact by transforming your vision into a visual experience.</p>
 
                 <button className="rounded-[1.5rem] bg-black px-[2.5rem] py-[.6rem] text-white text-center hover:bg-black/80 duration-200">Contact us</button>
