@@ -9,7 +9,7 @@ export default function Team() {
         <>
             <h1 className="text-center text-[2.5rem] mt-[10rem]">Working with you every step of the way</h1>
 
-            <div className="flex justify-center gap-[4rem] mt-[4rem]">
+            <div className="flex justify-center gap-[4rem] mt-[3rem]">
                 <div className="flex-col">
                     <Image width={500} height={500} alt="Images of website layouts"
                         className="w-auto h-auto" src="/images/AdreanPic.png"></Image>
