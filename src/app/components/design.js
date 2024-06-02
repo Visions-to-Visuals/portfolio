@@ -20,9 +20,9 @@ export default function Design() {
             <div>
                 <h1 className="text-[3rem] mx-auto leading-[4.6rem]">Website Design UI/UX</h1>
 
-                <p className="text-[1.2rem] mt-[1.5rem] leading-8 opacity-60 w-[33rem]">{"Effective web design should not only capture your brand's values and your customers' needs, but also makes your site easy to use. Our crucial attention to UI helps visitors save time and enhances their overall experience. This not only attracts more customers but also boosts your credibility while significantly cutting down on unnecessary costs."}</p>
+                <p className="text-[1.1rem] mt-[1rem] leading-8 opacity-60 w-[33rem]">{"Effective web design should not only capture your brand's values and your customers' needs, but also makes your site easy to use. Our crucial attention to UI helps visitors save time and enhances their overall experience. This not only attracts more customers but also boosts your credibility while significantly cutting down on unnecessary costs."}</p>
 
-                <div className="flex flex-col gap-8 mt-[4rem]">
+                <div className="flex flex-col gap-8 mt-[3rem]">
                     <List text="Understand your goals and pain points."></List>
                     <List text="Aesthetic color palettes and fonts."></List>
                     <List text="User-centric experience and strategy."></List>
@@ -33,24 +33,24 @@ export default function Design() {
             </div>
 
             <div className="flex justify-center relative">
-                <Image width={1100} height={1100} alt="Images of website layouts" 
-                className="w-auto h-auto z-[10]" src="/images/Design.png"></Image>
+                <Image width={1000} height={1000} alt="Images of website layouts" 
+                className="w-[32rem] h-fit z-[10]" src="/images/Design.png"></Image>
             </div>
         </div>
 
         <div className="flex justify-center gap-[6.5rem] mt-[10rem]">
 
             <div className="flex justify-center relative">
-                <Image width={1100} height={1100} alt="Images of website layouts" 
-                className="w-auto h-auto z-[10]" src="/images/Development.png"></Image>
+                <Image width={1000} height={1000} alt="Images of website layouts" 
+                className="w-[32rem] h-fit z-[10]" src="/images/Development.png"></Image>
             </div>
 
             <div>
                 <h1 className="text-[3rem] mx-auto leading-[4.6rem]">Website Development</h1>
 
-                <p className="text-[1.2rem] mt-[1.5rem] leading-8 opacity-60 w-[34rem]">{"Our development services ensure your site is responsive and high-performing across all devices. By optimizing website speed and functionality, we enhance user engagement and retention to directly contribute to your business’s success. No matter the complexity of the website, we always find the best solution to keep you and your visitors happy."}</p>
+                <p className="text-[1.1rem] mt-[1rem] leading-8 opacity-60 w-[34rem]">{"Our development services ensure your site is responsive and high-performing across all devices. By optimizing website speed and functionality, we enhance user engagement and retention to directly contribute to your business’s success. No matter the complexity of the website, we'll find the best solution to keep you and your visitors happy."}</p>
 
-                <div className="flex flex-col gap-8 mt-[4rem]">
+                <div className="flex flex-col gap-8 mt-[2.5rem]">
                     <List text="Code and no-code solutions."></List>
                     <List text="Responsive across all devices."></List>
                     <List text="Databases, blogs, and newsletters."></List>

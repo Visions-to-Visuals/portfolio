@@ -18,14 +18,14 @@ export default function Hero() {
             </div>
 
             <div className="flex justify-center mt-[4rem] relative">
-                <Image width={1100} height={1100} priority="true" alt="Images of website layouts" 
-                className="w-auto h-aut z-[10]" src="/images/HeroProjects.png"></Image>
+                <Image width={1000} height={1000} priority="true" alt="Images of website layouts" 
+                className="w-[75rem] h-auto z-[10]" src="/images/HeroProjects.png"></Image>
 
-                <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/OrangeGlow.png"
+                {/* <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/OrangeGlow.png"
                 className="absolute bottom-[16rem] left-[-2rem] z-[-1]"></Image>
 
                 <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/YellowGlow.png"
-                className="absolute bottom-[24rem] right-[0rem] z-[-1]"></Image>
+                className="absolute bottom-[24rem] right-[0rem] z-[-1]"></Image> */}
             </div>
         </>
     );
