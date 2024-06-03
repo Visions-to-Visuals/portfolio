@@ -30,8 +30,9 @@ export default function Pricing() {
           <h2 className="text-2xl font-semibold">Small Business</h2>
           <p className="mt-4 opacity-60">Ideal for websites that don't require complex features and a lot of pages.</p>
         </div>
-        <div className="mb-8">
-          <span className="text-4xl font-extrabold">$1000-1500</span>
+        <div className="mb-8 flex flex-col justify-center items-center">
+            <span class="text-[1rem] font-medium text-gray-400">Starting at </span>
+            <span className="text-4xl font-extrabold">$1000</span>
         </div>
         <ul className="mb-8 space-y-4">
           <List text="Website Sitemap"></List>
@@ -48,7 +49,7 @@ export default function Pricing() {
         </ul>
       </div>
 
-      <div className="rounded-[1rem] shadow-lg p-6 transform w-[23rem tablet-s:w-[30rem]">
+      <div className="rounded-[1rem] shadow-lg p-6 transform w-[23rem] tablet-s:w-[30rem]">
         <div className="mb-8">
           <h2 className="text-2xl font-semibold">Upscaling</h2>
           <p className="mt-4 opacity-60">Great for more complex websites that need a little more of everything.</p>

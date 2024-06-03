@@ -10,8 +10,6 @@ export default function Navbar() {
     const [scrollPosition, setScrollPosition] = useState(0);
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);
     const [isAltTheme, setIsAltTheme] = useState(false);
-
-
     const [isMobile, setIsMobile] = useState(null);
     const [overlayVisible, setOverlayVisible] = useState(false);
     const toggleOverlay = () => setOverlayVisible(!overlayVisible);
@@ -90,35 +88,68 @@ export default function Navbar() {
         )
     }
 
+    function MobileNavItem( {text, page} ) {
+        return (
+            <a href={page}>
+                <h4 className="tablet-s:text-[1.5rem] px-2 py-1 cursor-pointer duration-300">{text}</h4>
+            </a>
+        )
+    }
+
     return(
         <>
             {isMobile ? (
-            <nav className={`flex justify-between items-center px-[4vw] h-[5rem] top-0 sticky z-[100]
-            ${isAltTheme ? "bg-softblack/80 duration-300 backdrop-blur-lg": "bg-white/80 duration-300 backdrop-blur-lg"}`}>
-                <div className={`fixed z-10 ${isAltTheme ? "bg-white": "bg-softblack"}
-                duration-500 ease-in-out ${overlayVisible ? 'right-0' : '-right-[300px]'} w-[300px] mobile:w-[240px]`}>
-                    <ul className={`flex flex-col items-center justify-end px-4 gap-y-8 text-white mt-[6rem] ${isAltTheme ? "text-softblack": "text-white"}`}>
-                        <NavItem text="Home" page=""></NavItem>
-                        <NavItem text="Services" page=""></NavItem>
-                        <NavItem text="Work" page=""></NavItem>
-                        <NavItem text="Pricing" page=""></NavItem>
-                        <NavItem text="Contact" page=""></NavItem>
-                    </ul>
-                </div>
-
-                {isAltTheme ? 
-                <Image width={1000} height={1000} alt="Visions to Visuals Logo" className="w-[14rem] h-auto" src="/images/v2vinvert.png"></Image>
-                : 
-                <Image width={1000} height={1000} alt="Visions to Visuals Logo" className="w-[14rem] h-auto" src="/images/v2vlogo.png"></Image>
-                }
-
-                <FontAwesomeIcon
-                icon={overlayVisible ? faXmark : faBars}
-                className="cursor-pointer text-3xl z-10"
-                color={isAltTheme ? "black duration-200": "white duration-200"}
-                onClick={toggleOverlay}
-                />
-            </nav>
+            <nav
+            className={`flex justify-between items-center px-[4vw] h-[5rem] sticky top-0 z-[100] ${
+              isAltTheme
+                ? "bg-softblack/80 backdrop-blur-lg"
+                : "bg-white/80 duration-300 backdrop-blur-lg"
+            }`}
+          >
+            {isAltTheme ? (
+              <Image
+                width={1000}
+                height={100}
+                alt="Visions to Visuals Logo z-[1000]"
+                className="w-[14rem] h-auto"
+                src="/images/v2vinvert.png"
+              ></Image>
+            ) : (
+              <Image
+                width={1000}
+                height={100}
+                alt="Visions to Visuals Logo z-[1000]"
+                className="w-[14rem] h-auto"
+                src="/images/v2vlogo.png"
+              ></Image>
+            )}
+  
+            <FontAwesomeIcon
+              icon={overlayVisible ? faXmark : faBars}
+              className={`cursor-pointer text-3xl z-10 ${
+                isAltTheme ? "text-white " : "text-black"
+              } ${overlayVisible ? "text-white" : "text-black"}`}
+              onClick={toggleOverlay}
+            />
+  
+            <div
+            className={`fixed top-0 left-0 w-full bg-softblack duration-[800ms] ease-in-out transform h-[100lvh] ${
+              overlayVisible ? "translate-y-0" : "-translate-y-full"
+            }`}
+            >
+                <ul
+              className={`flex flex-col gap-4 pl-[3rem] pt-[4rem] text-white font-[600] ${
+                overlayVisible ? "fade-in" : "fade-out"
+              }`}
+            >
+                <MobileNavItem text="Home" page="#"></MobileNavItem>
+                <MobileNavItem text="Services" page="#"></MobileNavItem>
+                <MobileNavItem text="Work" page="#"></MobileNavItem>
+                <MobileNavItem text="Pricing" page="#"></MobileNavItem>
+                <MobileNavItem text="Contact" page="#"></MobileNavItem>
+                </ul>
+            </div>
+          </nav>
 
             ):( 
             <nav className={`tablet-s:hidden sticky z-[100] top-0 mx-auto right-0 left-0 py-[2rem] px-[6rem] max-w-[110rem] backdrop-blur-lg
@@ -127,9 +158,9 @@ export default function Navbar() {
                 <div className="flex justify-between items-center">
 
                 {isAltTheme ? 
-                <Image width={1000} height={1000} alt="Visions to Visuals Logo" className="w-[14rem] h-full" src="/images/v2vinvert.png"></Image>
+                <Image width={1000} height={100} alt="Visions to Visuals Logo" className="w-[14rem] h-full" src="/images/v2vinvert.png"></Image>
                 : 
-                <Image width={1000} height={1000} alt="Visions to Visuals Logo" className="w-[14rem] h-full" src="/images/v2vlogo.png"></Image>
+                <Image width={1000} height={100} alt="Visions to Visuals Logo" className="w-[14rem] h-full" src="/images/v2vlogo.png"></Image>
                 }
 
                     <ul className="flex items-center justify-center gap-[3rem]">

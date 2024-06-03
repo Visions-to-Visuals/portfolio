@@ -18,15 +18,15 @@ export default function Team() {
 
     return(
         <>
-            <h1 className="text-center text-[3rem] tablet-s:text-[2.5rem] tablet-s:px-[2rem] mt-[10rem]">Working with you every step of the way</h1>
+            <h1 className="text-center text-[3rem] tablet-s:text-[2.5rem] tablet-s:px-[2rem] mt-[10rem] mobile:mt-[6rem] mobile:px-0 mobile:w-[85%] mobile:mx-auto">Working with you every step of the way</h1>
 
-            <div className="flex justify-center gap-[4rem] mt-[3rem] tablet-s:gap-[2rem]">
+            <div className="flex justify-center gap-[4rem] mt-[3rem] tablet-s:gap-[2rem] tablet-s:flex-wrap tablet-s:px-[2rem] mobile:flex-col mobile:items-center">
                 <Member image="/images/AdreanPic.png" name="Adrean" role="Frontend Developer"></Member>
                 <Member image="/images/BenPic.png" name="Benjamin Schoolland" role="Backend Developer"></Member>
                 <Member image="/images/KirillPic.png" name="Kirill Kovalenko" role="Client Developer"></Member>
             </div>
 
-            <div className="flex justify-center mt-[3rem] gap-x-[7rem] tablet-s:gap-x-[4rem] items-end mb-[5rem]">
+            <div className="flex justify-center mt-[3rem] gap-x-[7rem] tablet-s:gap-x-[4rem] items-end mb-[5rem] tablet-s:flex-wrap tablet-s:px-[2rem] tablet-s:gap-y-8">
                 <p className="text-[1.2rem] tablet-s:text-[1rem] leading-8 w-[45rem] tablet-s:w-[26rem] tablet-s:leading-7">Since our first project at Modesto Junior College in 2022, our mission has been clear: to create websites that do more than just look good—they make your day easier, more efficient, and successful. Let us elevate your online presence and make an impact by transforming your vision into a visual experience.</p>
 
                 <button className="rounded-[1.5rem] bg-black px-[2.5rem] py-[.6rem] text-white text-center hover:bg-black/80 duration-200 tablet-s:scale-95">Contact us</button>

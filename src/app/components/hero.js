@@ -7,11 +7,11 @@ export default function Hero() {
 
     return(
         <>
-            <h1 className="text-[3.6rem] tablet-s:text-[2.5rem] tablet-s:px-[2rem] tablet-s:leading-[3.5rem] text-center w-[58rem] tablet-s:w-auto mx-auto leading-[4.6rem] mt-[2rem]">We make websites that look <span className="bg-gradient-to-r from-[#EC512B] to-[#F5BF49] bg-clip-text 
+            <h1 className="text-[3.6rem] tablet-s:text-[2.5rem] mobile:text-[2.2rem] mobile:leading-[3rem] tablet-s:px-[2rem] tablet-s:leading-[3.5rem] text-center w-[58rem] tablet-s:w-auto mx-auto leading-[4.6rem] mt-[2rem]">We make websites that look <span className="bg-gradient-to-r from-[#EC512B] to-[#F5BF49] bg-clip-text 
             text-transparent">great</span> and perform <span className="bg-gradient-to-r from-[#EC512B] to-[#F5BF49] bg-clip-text 
             text-transparent">even better</span></h1>
 
-            <p className="text-[1.2rem] tablet-s:text-[1.1rem] text-center w-[40rem] tablet-s:w-[85%] tablet-s:px-[2rem] mx-auto mt-[1rem] leading-8 opacity-50">{"It's more than words and images. It's about creating a digital presence where your brand’s values and stories come to life."}</p>
+            <p className="text-[1.2rem] tablet-s:text-[1.1rem] text-center w-[40rem] tablet-s:w-[85%] mobile:w-[100%] mobile:px-[3rem] tablet-s:px-[2rem] mx-auto mt-[1rem] leading-8 opacity-50">{"It's more than words and images. It's about creating a digital presence where your brand’s values and stories come to life."}</p>
 
             <div className="flex justify-center mt-[2rem] ">
                 <button className="rounded-[1.5rem] bg-black px-[2.5rem] py-[.6rem] text-white text-center hover:bg-black/80 duration-200 scale-95">View our work</button>

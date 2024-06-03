@@ -112,6 +112,11 @@ h2
   font-family: "Demibold"
 }
 
+h4
+{
+  font-family: "Medium"
+}
+
 p
 {
   font-family: "Regular";
@@ -137,5 +142,16 @@ button
 ::selection {
   /* background: #F5BF49; */
   color: #EC512B;
+}
+
+.fade-in {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+  transition-delay: 250ms;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
 }
 

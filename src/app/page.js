@@ -43,7 +43,7 @@ export default function Home() {
       <Design></Design>
       <Team></Team>
       <Work></Work>
-      <Pricing></Pricing>
+      {/* <Pricing></Pricing> */}
     </>
   );
 }
