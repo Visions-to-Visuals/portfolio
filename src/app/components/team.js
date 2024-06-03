@@ -5,35 +5,31 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Team() {
 
+    function Member({image, name, role}) {
+       return(
+        <div className="flex-col">
+            <Image width={500} height={500} alt="Images of website layouts"
+                className="w-[18rem] h-auto tablet-s:w-[12rem]" src={image}></Image>
+            <h2 className="mt-4 text-[1.2rem]">{name}</h2>
+            <p className="opacity-60">{role}</p>
+        </div>     
+       );
+    }
+
     return(
         <>
-            <h1 className="text-center text-[3rem] mt-[10rem]">Working with you every step of the way</h1>
+            <h1 className="text-center text-[3rem] tablet-s:text-[2.5rem] tablet-s:px-[2rem] mt-[10rem]">Working with you every step of the way</h1>
 
-            <div className="flex justify-center gap-[4rem] mt-[3rem]">
-                <div className="flex-col">
-                    <Image width={500} height={500} alt="Images of website layouts"
-                        className="w-[18rem] h-auto" src="/images/AdreanPic.png"></Image>
-                        <h2 className="mt-4 text-[1.2rem]">Adrean Cajigas</h2>
-                        <p className="opacity-60">Frontend Developer</p>
-                </div>
-                <div>
-                    <Image width={500} height={500} alt="Images of website layouts"
-                        className="w-[18rem] h-auto" src="/images/BenPic.png"></Image>
-                        <h2 className="mt-4 text-[1.2rem]">Benjamin Schoolland</h2>
-                        <p className="opacity-60">Backend Developer</p>
-                </div>
-                <div>
-                    <Image width={500} height={500} alt="Images of website layouts"
-                        className="w-[18rem] h-auto" src="/images/KirillPic.png"></Image>
-                        <h2 className="mt-4 text-[1.2rem]">Kirill Kovakuku</h2>
-                        <p className="opacity-60">Client Developer</p>
-                </div>
+            <div className="flex justify-center gap-[4rem] mt-[3rem] tablet-s:gap-[2rem]">
+                <Member image="/images/AdreanPic.png" name="Adrean" role="Frontend Developer"></Member>
+                <Member image="/images/BenPic.png" name="Benjamin Schoolland" role="Backend Developer"></Member>
+                <Member image="/images/KirillPic.png" name="Kirill Kovalenko" role="Client Developer"></Member>
             </div>
 
-            <div className="flex justify-center mt-[3rem] gap-x-[7rem] items-end mb-[5rem]">
-                <p className="text-[1.2rem] leading-8 w-[45rem]">Since our first project at Modesto Junior College in 2022, our mission has been clear: to create websites that do more than just look good—they make your day easier, more efficient, and successful. Let us elevate your online presence and make an impact by transforming your vision into a visual experience.</p>
+            <div className="flex justify-center mt-[3rem] gap-x-[7rem] tablet-s:gap-x-[4rem] items-end mb-[5rem]">
+                <p className="text-[1.2rem] tablet-s:text-[1rem] leading-8 w-[45rem] tablet-s:w-[26rem] tablet-s:leading-7">Since our first project at Modesto Junior College in 2022, our mission has been clear: to create websites that do more than just look good—they make your day easier, more efficient, and successful. Let us elevate your online presence and make an impact by transforming your vision into a visual experience.</p>
 
-                <button className="rounded-[1.5rem] bg-black px-[2.5rem] py-[.6rem] text-white text-center hover:bg-black/80 duration-200">Contact us</button>
+                <button className="rounded-[1.5rem] bg-black px-[2.5rem] py-[.6rem] text-white text-center hover:bg-black/80 duration-200 tablet-s:scale-95">Contact us</button>
             </div>
         </>
     );

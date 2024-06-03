@@ -6,6 +6,7 @@ import Hero from "./components/hero";
 import Design from "./components/design";
 import Team from "./components/team";
 import Work from "./components/work";
+import Pricing from './components/pricing';
 
 export default function Home() {
 
@@ -42,6 +43,7 @@ export default function Home() {
       <Design></Design>
       <Team></Team>
       <Work></Work>
+      <Pricing></Pricing>
     </>
   );
 }
