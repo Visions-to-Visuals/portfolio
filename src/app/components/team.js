@@ -18,7 +18,7 @@ export default function Team() {
 
     return(
         <>
-            <h1 className="text-center text-[3rem] tablet-s:text-[2.5rem] tablet-s:px-[2rem] mt-[10rem] mobile:mt-[6rem] mobile:px-0 mobile:w-[85%] mobile:mx-auto">Working with you every step of the way</h1>
+            <h1 className="text-center text-[3rem] tablet-s:text-[2.5rem] mobile:text-[2rem] tablet-s:px-[2rem] mt-[10rem] mobile:mt-[6rem] mobile:px-0 mobile:w-[85%] mobile:mx-auto">Working with you every step of the way</h1>
 
             <div className="flex justify-center gap-[4rem] mt-[3rem] tablet-s:gap-[2rem] tablet-s:flex-wrap tablet-s:px-[2rem] mobile:flex-col mobile:items-center">
                 <Member image="/images/AdreanPic.png" name="Adrean" role="Frontend Developer"></Member>

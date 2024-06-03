@@ -100,7 +100,7 @@ export default function Navbar() {
         <>
             {isMobile ? (
             <nav
-            className={`flex justify-between items-center px-[4vw] h-[5rem] sticky top-0 z-[100] ${
+            className={`flex justify-between items-center px-[4vw] h-[5rem] mobile:h-[4.2rem] sticky top-0 z-[100] ${
               isAltTheme
                 ? "bg-softblack/80 backdrop-blur-lg"
                 : "bg-white/80 duration-300 backdrop-blur-lg"
@@ -111,7 +111,7 @@ export default function Navbar() {
                 width={1000}
                 height={100}
                 alt="Visions to Visuals Logo z-[1000]"
-                className="w-[14rem] h-auto"
+                className="w-[14rem] h-auto mobile:w-[13rem]"
                 src="/images/v2vinvert.png"
               ></Image>
             ) : (
@@ -119,7 +119,7 @@ export default function Navbar() {
                 width={1000}
                 height={100}
                 alt="Visions to Visuals Logo z-[1000]"
-                className="w-[14rem] h-auto"
+                className="w-[14rem] h-auto mobile:w-[13rem]"
                 src="/images/v2vlogo.png"
               ></Image>
             )}
