@@ -9,11 +9,11 @@ module.exports = {
     extend: {
 
       colors: {
-        white: "#FFFFFF",    
+        white: "#F9F9F9",
         black: "#000000",
         softblack: "#17191E",
-        orange: "#EC512B",  
-        yellow: "#F5BF49",   
+        orange: "#EC512B",
+        yellow: "#F5BF49",
       },
 
       screens: {

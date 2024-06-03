@@ -48,9 +48,9 @@ export default function Design() {
             <div>
                 <h1 className="text-[3rem] mx-auto leading-[4.6rem]">Website Development</h1>
 
-                <p className="text-[1.1rem] mt-[1rem] leading-8 opacity-60 w-[34rem]">{"Our development services ensure your site is responsive and high-performing across all devices. By optimizing website speed and functionality, we enhance user engagement and retention to directly contribute to your business’s success. No matter the complexity of the website, we'll find the best solution to keep you and your visitors happy."}</p>
+                <p className="text-[1.1rem] mt-[1rem] leading-8 opacity-60 w-[34rem]">{"Our development services ensure your site is responsive and high-performing across all devices. By optimizing website speed and functionality, we enhance user engagement to directly contribute to your business’s success. No matter the complexity of the website, we'll find the best solution to keep you and your visitors happy."}</p>
 
-                <div className="flex flex-col gap-8 mt-[2.5rem]">
+                <div className="flex flex-col gap-8 mt-[3rem]">
                     <List text="Code and no-code solutions."></List>
                     <List text="Responsive across all devices."></List>
                     <List text="Databases, blogs, and newsletters."></List>

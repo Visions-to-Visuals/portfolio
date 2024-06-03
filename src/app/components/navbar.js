@@ -11,6 +11,7 @@ export default function Navbar() {
     const [overlayVisible, setOverlayVisible] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(0);
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+    const [isAltTheme, setIsAltTheme] = useState(false);
 
     const handleScroll = () => {
         const currentScrollPosition = window.scrollY;
@@ -30,6 +31,33 @@ export default function Navbar() {
             window.removeEventListener("scroll", handleScroll);
         };
     }, [scrollPosition]);
+
+
+    useEffect(() => {
+        const workSection = document.getElementById('work-section');
+        const observer = new IntersectionObserver(
+          ([entry]) => {
+            if (entry.isIntersecting) {
+              setIsAltTheme(true);
+            } else {
+              setIsAltTheme(false);
+            }
+          },
+          {
+            threshold: 0.1,
+          }
+        );
+    
+        if (workSection) {
+          observer.observe(workSection);
+        }
+    
+        return () => {
+          if (workSection) {
+            observer.unobserve(workSection);
+          }
+        };
+      }, []);
 
 
     function NavItem( {text, page} ) {
@@ -64,16 +92,21 @@ export default function Navbar() {
             </nav>
 
             ):( 
-            <nav className={`sticky z-[100] top-0 mx-auto right-0 left-0 py-[2rem] px-[6rem] max-w-[110rem] bg-white/85 backdrop-blur-md ${isNavbarVisible ? 'opacity-100' : 'opacity-100'} transition-opacity duration-300`}>
+            <nav className={`sticky z-[100] top-0 mx-auto right-0 left-0 py-[2rem] px-[6rem] max-w-[110rem] backdrop-blur-lg ${isNavbarVisible ? 'opacity-100' : 'opacity-100'} transition-opacity duration-300 ${isAltTheme ? "bg-softblack/80": "bg-white/80"}`}>
 
                 <div className="flex justify-between items-center">
-                    <Image width={1000} height={100} alt="Visions to Visuals Logo" className="w-[14rem] h-full" src="/images/v2vlogo.png"></Image>
+
+                {isAltTheme ? 
+                <Image width={1000} height={100} alt="Visions to Visuals Logo" className="w-[14rem] h-full" src="/images/v2vinvert.png"></Image>
+                : 
+                <Image width={1000} height={100} alt="Visions to Visuals Logo" className="w-[14rem] h-full" src="/images/v2vlogo.png"></Image>
+                }
 
                     <ul className="flex items-center justify-center gap-[3rem]">
                         <NavItem text="Home" page=""></NavItem>
                         <NavItem text="Services" page=""></NavItem>
                         <NavItem text="Work" page=""></NavItem>
-                        <NavItem text="FAQ" page=""></NavItem>
+                        <NavItem text="Pricing" page=""></NavItem>
                         <NavItem text="Contact" page=""></NavItem>
                     </ul>
                 </div>

@@ -35,6 +35,50 @@
   font-display: swap;
 }
 
+:root {
+  --bg-color: #F9F9F9; /* Default soft black */
+  --text-color: #000000; /* Default white */
+  --accent-color: #EC512B; /* Default orange */
+  --secondary-color: #F5BF49; /* Default yellow */
+}
+
+.alt-theme {
+  --bg-color: #17191E; /* Alternate soft black */
+  --text-color: #F9F9F9; /* Alternate white */
+  --accent-color: #EC512B; /* Alternate orange */
+  --secondary-color: #F5BF49; /* Alternate yellow */
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 300ms, color 300ms;
+}
+
+.text-accent {
+  color: var(--accent-color);
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
+
+.text-secondary {
+  color: var(--secondary-color);
+}
+
+.bg-secondary {
+  background-color: var(--secondary-color);
+}
+
+.navbar {
+  transition: background-color 300ms;
+}
+
+.navbar.alt-theme {
+  background-color: var(--text-color);
+}
+
 *
 {
   box-sizing: border-box;
