@@ -16,7 +16,7 @@ export default function Design() {
 
     return(
     <>
-        <div className="flex justify-center gap-[6.5rem] mt-[10rem] mobile:mt-[6rem] tablet-s:flex-wrap">
+        <div id="services" className="flex justify-center gap-[6.5rem] pt-[10rem] mobile:pt-[6rem] tablet-s:flex-wrap">
             <div>
                 <h1 className="text-[3rem] mx-auto leading-[4.6rem] tablet-s:text-[2.5rem] mobile:text-[2rem] mobile:w-[85%]">Website Design UI/UX</h1>
 
@@ -34,7 +34,9 @@ export default function Design() {
                     <List text="Reflect your brand and unique values."></List>
                 </div>
 
-                <button className="rounded-[1.5rem] mt-[4rem] bg-black px-[2.5rem] py-[.6rem] text-white text-center mobile:mx-[2rem] hover:bg-black/80 duration-200 tablet-s:scale-95 mobile:mt-[3rem]">Get a free evaluation</button>
+                <a href="https://calendly.com/contact-cbnc/v2v" target="_blank">
+                    <button className="rounded-[1.5rem] mt-[4rem] bg-black px-[2.5rem] py-[.6rem] text-white text-center mobile:mx-[2rem] hover:bg-black/80 duration-200 tablet-s:scale-95 mobile:mt-[3rem]">Get a free evaluation</button>
+                </a>
             </div>
     
             <div className="flex justify-center relative tablet-s:hidden">

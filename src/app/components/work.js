@@ -15,7 +15,7 @@ export default function Work() {
     }
 
     return(
-        <div className="pt-[9rem] mb-[9rem] tablet-s:pt-[4rem] mobile:pt-[2rem]" id="work-section">
+        <div className="pt-[9rem] mb-[9rem] tablet-s:pt-[4rem] mobile:pt-[2rem]" id="work">
             <h1 className="text-[3.6rem] tablet-s:text-[2.5rem] text-center mx-auto mobile:text-[2rem] mobile:w-[85%] mobile:leading-[3rem] leading-[4.6rem] mt-[2rem] text-white">Our stunning collection of websites</h1>
 
             <div className="flex justify-center items-start mt-[4rem] mobile:mt-[2rem] relative gap-[2.5rem] tablet-s:flex-wrap">

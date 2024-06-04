@@ -45,7 +45,7 @@ export default function Navbar() {
 
 
     useEffect(() => {
-        const workSection = document.getElementById('work-section');
+        const workSection = document.getElementById('work');
         const observer = new IntersectionObserver(
           ([entry]) => {
             if (entry.isIntersecting) {
@@ -90,8 +90,8 @@ export default function Navbar() {
 
     function MobileNavItem( {text, page} ) {
         return (
-            <a href={page}>
-                <h4 className="tablet-s:text-[1.5rem] px-2 py-1 cursor-pointer duration-300">{text}</h4>
+            <a href={page} onClick={closeMobileMenu}>
+                <h4 className="tablet-s:text-[1.5rem] tracking-wider px-2 py-1 cursor-pointer duration-300">{text}</h4>
             </a>
         )
     }
@@ -142,11 +142,12 @@ export default function Navbar() {
                 overlayVisible ? "fade-in" : "fade-out"
               }`}
             >
-                <MobileNavItem text="Home" page="#"></MobileNavItem>
-                <MobileNavItem text="Services" page="#"></MobileNavItem>
-                <MobileNavItem text="Work" page="#"></MobileNavItem>
-                <MobileNavItem text="Pricing" page="#"></MobileNavItem>
-                <MobileNavItem text="Contact" page="#"></MobileNavItem>
+                <MobileNavItem text="Home" page="#home"></MobileNavItem>
+                <MobileNavItem text="Services" page="#services"></MobileNavItem>
+                <MobileNavItem text="Team" page="#team"></MobileNavItem>
+                <MobileNavItem text="Work" page="#work"></MobileNavItem>
+                {/* <MobileNavItem text="Pricing" page="#"></MobileNavItem> */}
+                <MobileNavItem text="Free Evaluation" page="https://calendly.com/contact-cbnc/v2v"></MobileNavItem>
                 </ul>
             </div>
           </nav>
@@ -164,11 +165,12 @@ export default function Navbar() {
                 }
 
                     <ul className="flex items-center justify-center gap-[3rem]">
-                        <NavItem text="Home" page=""></NavItem>
-                        <NavItem text="Services" page=""></NavItem>
-                        <NavItem text="Work" page=""></NavItem>
-                        <NavItem text="Pricing" page=""></NavItem>
-                        <NavItem text="Contact" page=""></NavItem>
+                        <NavItem text="Home" page="#home"></NavItem>
+                        <NavItem text="Services" page="#services"></NavItem>
+                        <NavItem text="Team" page="#team"></NavItem>
+                        <NavItem text="Work" page="#work"></NavItem>
+                        {/* <NavItem text="Pricing" page=""></NavItem> */}
+                        <NavItem text="Free Evaluation" page="https://calendly.com/contact-cbnc/v2v"></NavItem>
                     </ul>
                 </div>
             </nav>

@@ -11,7 +11,7 @@ import Pricing from './components/pricing';
 export default function Home() {
 
   useEffect(() => {
-    const workSection = document.getElementById('work-section');
+    const workSection = document.getElementById('work');
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
