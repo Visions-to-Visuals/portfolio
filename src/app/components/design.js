@@ -25,7 +25,7 @@ export default function Design() {
                     className="w-[30rem] h-fit z-[10] mobile:w-[85%] mx-auto" src="/images/Design.png"></Image>
                 </div>
 
-                <p className="text-[1.0rem] mx-auto mt-[2rem] leading-8 opacity-60 w-[30rem] mobile:w-[85%]">{"Effective web design should not only capture your brand's values and your customers' needs, but also makes your site easy to use. Our crucial attention to UI helps visitors save time and enhances their overall experience. This not only attracts more customers but also boosts your credibility while significantly cutting down on unnecessary costs."}</p>
+                <p className="text-[1.1rem] tablet-s:text-[1.0rem] mx-auto mt-[2rem] leading-8 w-[30rem] mobile:w-[85%]">{"Effective web design should not only capture your brand's values and your customers' needs, but also makes your site easy to use. Our crucial attention to UI helps visitors save time and enhances their overall experience. This not only attracts more customers but also boosts your credibility while significantly cutting down on unnecessary costs."}</p>
 
                 <div className="flex flex-col gap-8 mt-[3rem] mx-auto mobile:w-[85%]">
                     <List text="Understand your goals and pain points."></List>
@@ -39,7 +39,7 @@ export default function Design() {
     
             <div className="flex justify-center relative tablet-s:hidden">
                 <Image width={1000} height={1000} alt="Images of website layouts" 
-                className="w-[30rem] h-fit z-[10]" src="/images/Design.png"></Image>
+                className="w-[33rem] h-fit z-[10]" src="/images/Design.png"></Image>
             </div>
         </div>
 
@@ -47,7 +47,7 @@ export default function Design() {
 
             <div className="flex justify-center relative tablet-s:hidden">
                 <Image width={1000} height={1000} alt="Images of website layouts" 
-                className="w-[30rem] h-fit z-[10]" src="/images/Development.png"></Image>
+                className="w-[33rem] h-fit z-[10]" src="/images/Development.png"></Image>
             </div>
 
             <div>
@@ -58,7 +58,7 @@ export default function Design() {
                     className="w-[30rem] h-fit z-[10] mobile:mx-auto mobile:w-[85%]" src="/images/Development.png"></Image>
                 </div>
 
-                <p className="text-[1.0rem] mt-[2rem] leading-8 opacity-60 w-[30rem] mobile:mx-auto mobile:w-[85%]">{"Our development services ensure your site is responsive and high-performing across all devices. By optimizing website speed and functionality, we enhance user engagement to directly contribute to your business’s success. No matter the complexity of the website, we'll find the best solution to keep you and your visitors happy."}</p>
+                <p className="text-[1.1rem] tablet-s:text-[1.0rem] mt-[2rem] leading-8 w-[30rem] mobile:mx-auto mobile:w-[85%]">{"Our development services ensure your site is responsive and high-performing across all devices. By optimizing website speed and functionality, we enhance user engagement to directly contribute to your business’s success. No matter the complexity of the website, we'll find the best solution to keep you and your visitors happy."}</p>
 
                 <div className="flex flex-col gap-8 mt-[3rem] mobile:w-[85%] mobile:mx-auto">
                     <List text="Code and no-code solutions."></List>

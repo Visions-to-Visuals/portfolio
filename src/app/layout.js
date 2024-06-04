@@ -31,8 +31,8 @@ export default function RootLayout({ children }) {
     laptop-s:text-[.75rem] 
     tablet:text-[1.2vw]
     tablet-s:text-[1rem]
-    mobile:text-[.85rem]
-    mobile-s:text-[.8rem]
+    mobile:text-[.9rem]
+    mobile-s:text-[.85rem]
     ">
       <body>{children}</body>
     </html>

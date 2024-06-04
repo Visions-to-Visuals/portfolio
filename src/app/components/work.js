@@ -15,10 +15,10 @@ export default function Work() {
     }
 
     return(
-        <div className="pt-[9rem] mb-[9rem] tablet-s:pt-[4rem]" id="work-section">
+        <div className="pt-[9rem] mb-[9rem] tablet-s:pt-[4rem] mobile:pt-[2rem]" id="work-section">
             <h1 className="text-[3.6rem] tablet-s:text-[2.5rem] text-center mx-auto mobile:text-[2rem] mobile:w-[85%] mobile:leading-[3rem] leading-[4.6rem] mt-[2rem] text-white">Our stunning collection of websites</h1>
 
-            <div className="flex justify-center items-start mt-[4rem] relative gap-[2.5rem] tablet-s:flex-wrap">
+            <div className="flex justify-center items-start mt-[4rem] mobile:mt-[2rem] relative gap-[2.5rem] tablet-s:flex-wrap">
                 <Image width={1000} height={1000} priority="true" alt="Images of website layouts" 
                 className="w-[34rem] tablet-s:w-[80%] h-auto mobile:w-[85%]" src="/images/Club.png"></Image>
                 <Image width={1000} height={1000} priority="true" alt="Images of website layouts" 
@@ -47,7 +47,7 @@ export default function Work() {
                 className="w-[35rem] tablet-s:w-[80%] mobile:w-[85%] h-auto z-[10]" src="/images/BrendenThompson.png"></Image>
             </div>
 
-            <div className="flex flex-col items-center gap-[2.5rem] mt-[4rem] mobile:mt-[3rem] tablet-s:w-[80%] mx-auto">
+            <div className="flex flex-col items-center gap-[2.5rem] mt-[4rem] mobile:mt-[3rem] tablet-s:w-[80%] mobile:w-[85%] mx-auto">
                 <Description header="" text={"Video game designs, animator portfolios, anything and everything for your dream website. On-time, on-budget, and on-point."}></Description>
             </div>
         </div>
