@@ -73,7 +73,7 @@ export default function Navbar() {
 
       if (isMobile === null) {
         return (
-            <nav className={`flex justify-between items-center px-[4vw] h-[5rem] top-0 sticky z-[100] 
+            <nav className={`flex justify-between items-center px-[4vw] h-[6.2rem] tablet-s:h-[5rem] mobile:h-[4.2rem] top-0 sticky z-[100] 
             ${isAltTheme ? "bg-softblack/80 duration-300 backdrop-blur-lg": "bg-white/80 duration-300 backdrop-blur-lg"}`}>
             </nav>
         )
@@ -100,7 +100,7 @@ export default function Navbar() {
         <>
             {isMobile ? (
             <nav
-            className={`flex justify-between items-center px-[4vw] h-[5rem] mobile:h-[4.2rem] sticky top-0 z-[100] ${
+            className={`flex justify-between animate-fade items-center px-[4vw] h-[5rem] mobile:h-[4.2rem] sticky top-0 z-[100] ${
               isAltTheme
                 ? "bg-softblack/80 backdrop-blur-lg"
                 : "bg-white/80 duration-300 backdrop-blur-lg"
@@ -152,7 +152,7 @@ export default function Navbar() {
           </nav>
 
             ):( 
-            <nav className={`tablet-s:hidden sticky z-[100] top-0 mx-auto right-0 left-0 py-[2rem] px-[6rem] max-w-[110rem] backdrop-blur-lg
+            <nav className={`tablet-s:hidden animate-fade sticky z-[100] top-0 mx-auto right-0 left-0 py-[2rem] px-[6rem] max-w-[110rem] backdrop-blur-lg
             transition-opacity ${isAltTheme ? "bg-softblack/80 duration-300": "bg-white/80 duration-300"}`}>
 
                 <div className="flex justify-between items-center">
