@@ -46,7 +46,7 @@ export default function Faq() {
                 <FaqItem 
                     question="Are there any refunds if I’m not satisfied with the website?"
                     answer="We understand that investing in a new website is a significant decision, and we are committed to delivering 
-                    the work that meets your expectations. However, due to the extensive time, effort, and resources invested in 
+                    our best work to meet your expectations. However, due to the extensive time, effort, and resources invested in 
                     each project, we do not offer refunds once payment has been received."
                 ></FaqItem>
 
