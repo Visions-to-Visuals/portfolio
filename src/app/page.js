@@ -7,6 +7,7 @@ import Design from "./components/design";
 import Team from "./components/team";
 import Work from "./components/work";
 import Pricing from './components/pricing';
+import Faq from './components/faq';
 
 export default function Home() {
 
@@ -44,6 +45,7 @@ export default function Home() {
       <Team></Team>
       <Work></Work>
       {/* <Pricing></Pricing> */}
+      {/* <Faq></Faq> */}
     </>
   );
 }

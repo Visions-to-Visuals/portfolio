@@ -127,6 +127,11 @@ button
   font-family: "Medium";
 }
 
+summary span
+{
+  font-family: "Medium"
+}
+
 @layer utilities {
 	nav div ul li {
 		@apply relative tracking-wide;

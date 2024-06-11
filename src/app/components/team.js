@@ -24,7 +24,7 @@ export default function Team() {
 
             <div className="flex justify-center gap-[4rem] mt-[3rem] tablet-s:gap-[2rem] tablet-s:flex-wrap tablet-s:px-[2rem] mobile:flex-col mobile:items-start">
                 <Member image="/images/AdreanPic.png" name="Adrean Cajigas" role="Frontend Developer"></Member>
-                <Member image="/images/BenPic.png" name="Benjamin Schoolland" role="Backend Developer"></Member>
+                <Member image="/images/Benny.png" name="Benjamin Schoolland" role="Backend Developer"></Member>
                 <Member image="/images/KirillPic.png" name="Kirill Kovalenko" role="Client Developer"></Member>
             </div>
 
