@@ -80,9 +80,9 @@ export default function Navbar() {
     }
 
 
-    function NavItem( {text, page} ) {
+    function NavItem( {text, page, target} ) {
         return (
-            <a href={page}>
+            <a href={page} target={target}>
                 <li className="text-[1.1rem] tablet-s:text-[1.5rem] px-2 py-1 cursor-pointer duration-300 hover:text-accent">{text}</li>
             </a>
         )
@@ -165,12 +165,12 @@ export default function Navbar() {
                 }
 
                     <ul className="flex items-center justify-center gap-[3rem]">
-                        <NavItem text="Home" page="#home"></NavItem>
-                        <NavItem text="Services" page="#services"></NavItem>
-                        <NavItem text="Team" page="#team"></NavItem>
-                        <NavItem text="Work" page="#work"></NavItem>
+                        <NavItem text="Home" page="#home" target=""></NavItem>
+                        <NavItem text="Services" page="#services" target=""></NavItem>
+                        <NavItem text="Team" page="#team" target=""></NavItem>
+                        <NavItem text="Work" page="#work" target=""></NavItem>
                         {/* <NavItem text="Pricing" page=""></NavItem> */}
-                        <NavItem text="Free Evaluation" page="https://calendly.com/contact-cbnc/v2v"></NavItem>
+                        <NavItem text="Free Evaluation" page="https://calendly.com/contact-cbnc/v2v" target="_blank"></NavItem>
                     </ul>
                 </div>
             </nav>

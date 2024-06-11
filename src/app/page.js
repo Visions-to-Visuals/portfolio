@@ -45,7 +45,7 @@ export default function Home() {
       <Team></Team>
       <Work></Work>
       {/* <Pricing></Pricing> */}
-      <Faq></Faq>
+      {/* <Faq></Faq> */}
     </>
   );
 }
