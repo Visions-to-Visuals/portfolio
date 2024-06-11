@@ -19,19 +19,19 @@ export default function Hero() {
 
             <p className="text-[1.2rem] animate-fadeLess tablet-s:text-[1.1rem] text-center w-[40rem] tablet-s:w-[85%] mobile-s:w-[90%] tablet-s:px-[2rem] mobile:px-0 mx-auto mt-[1rem] leading-8 opacity-60">{"It's more than words and images. It's about creating a digital presence where your brand’s values and stories come to life."}</p>
 
-            <div className="flex justify-center mt-[2rem] ">
+            <div className="flex justify-center mt-[2rem] relative">
                 <button className="rounded-[1.5rem] animate-fadeIn2 bg-black px-[2.5rem] py-[.6rem] text-white text-center hover:bg-black/80 duration-200" onClick={handleWorkClick}>View our work</button>
-            </div>
 
-            <div className="flex justify-center mt-[4rem] relative">
-                <Image width={1000} height={1000} priority="true" alt="Images of website layouts" 
-                className="w-[75rem] tablet-s:w-[92%] h-auto z-[10] animate-fadeIn3" src="/images/HeroProjects.png"></Image>
-
-                {/* <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/OrangeGlow.png"
-                className="absolute bottom-[16rem] left-[-2rem] z-[-1]"></Image>
+                <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/OrangeGlow.png"
+                className="absolute w-[52rem] tablet-s:hidden h-auto bottom-[-32rem] left-[0rem] z-[-1] animate-fade"></Image>
 
                 <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/YellowGlow.png"
-                className="absolute bottom-[24rem] right-[0rem] z-[-1]"></Image> */}
+                className="absolute w-[52rem] tablet-s:hidden h-auto bottom-[-21rem] right-[0rem] z-[-1] animate-fade"></Image>
+            </div>
+
+            <div className="flex justify-center mt-[4rem]">
+                <Image width={1000} height={1000} priority="true" alt="Images of website layouts" 
+                className="w-[75rem] tablet-s:w-[92%] h-auto z-[10] animate-fadeIn3" src="/images/HeroProjects.png"></Image>
             </div>
         </>
     );
