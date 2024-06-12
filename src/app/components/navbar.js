@@ -1,180 +1,127 @@
 "use client";
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback, memo } from "react";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faXmark} from "@fortawesome/free-solid-svg-icons";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
+// Logo Component
+const Logo = memo(({ isAltTheme }) => (
+    <Image
+        width={1000}
+        height={100}
+        alt="Visions to Visuals Logo"
+        className="w-[14rem] h-auto mobile:w-[13rem]"
+        src={isAltTheme ? "/images/v2vinvert.png" : "/images/v2vlogo.png"}
+    />
+));
+
+// NavItem Component
+const NavItem = memo(({ text, page, target }) => (
+    <a href={page} target={target}>
+        <li className="text-[1.1rem] px-2 py-1 cursor-pointer duration-300 hover:text-accent">{text}</li>
+    </a>
+));
+
+// MobileNavItem Component
+const MobileNavItem = memo(({ text, page, onClick }) => (
+    <a href={page} onClick={onClick}>
+        <h4 className="text-[1.5rem] tracking-wider px-2 py-1 cursor-pointer duration-300">{text}</h4>
+    </a>
+));
+
+// MobileNavbar Component
+const MobileNavbar = ({ isAltTheme, overlayVisible, toggleOverlay, closeMobileMenu }) => (
+    <nav className={`flex justify-between animate-fade items-center px-[4vw] h-[5rem] mobile:h-[4.2rem] sticky top-0 z-[100] ${isAltTheme ? "bg-softblack/80 backdrop-blur-lg" : "bg-white/80 duration-300 backdrop-blur-lg"}`}>
+        <Logo isAltTheme={isAltTheme} />
+        <FontAwesomeIcon
+            icon={overlayVisible ? faXmark : faBars}
+            className={`cursor-pointer text-3xl z-10 ${isAltTheme ? "text-white" : "text-black"} ${overlayVisible ? "text-white" : "text-black"}`}
+            onClick={toggleOverlay}
+        />
+        <div className={`fixed top-0 left-0 w-full bg-softblack duration-[800ms] ease-in-out transform h-[100lvh] ${overlayVisible ? "translate-y-0" : "-translate-y-full"}`}>
+            <ul className={`flex flex-col gap-4 pl-[3rem] pt-[4rem] text-white font-[600] ${overlayVisible ? "fade-in" : "fade-out"}`}>
+                <MobileNavItem text="Home" page="#home" onClick={closeMobileMenu} />
+                <MobileNavItem text="Services" page="#services" onClick={closeMobileMenu} />
+                <MobileNavItem text="Team" page="#team" onClick={closeMobileMenu} />
+                <MobileNavItem text="Work" page="#work" onClick={closeMobileMenu} />
+                {/* <MobileNavItem text="Pricing" page="#"></MobileNavItem> */}
+                <MobileNavItem text="Free Evaluation" page="https://calendly.com/contact-cbnc/v2v" onClick={closeMobileMenu} />
+            </ul>
+        </div>
+    </nav>
+);
+
+// DesktopNavbar Component
+const DesktopNavbar = ({ isAltTheme }) => (
+    <nav className={`animate-fade sticky z-[100] top-0 mx-auto right-0 left-0 py-[2rem] px-[6rem] backdrop-blur-lg transition-opacity ${isAltTheme ? "bg-softblack/80 duration-300" : "bg-white/80 duration-300"}`}>
+        <div className="flex justify-between items-center">
+            <Logo isAltTheme={isAltTheme} />
+            <ul className="flex items-center justify-center gap-[3rem]">
+                <NavItem text="Home" page="#home" target="" />
+                <NavItem text="Services" page="#services" target="" />
+                <NavItem text="Team" page="#team" target="" />
+                <NavItem text="Work" page="#work" target="" />
+                {/* <NavItem text="Pricing" page="" /> */}
+                <NavItem text="Free Evaluation" page="https://calendly.com/contact-cbnc/v2v" target="_blank" />
+            </ul>
+        </div>
+    </nav>
+);
 
 export default function Navbar() {
-
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [isNavbarVisible, setIsNavbarVisible] = useState(true);
     const [isAltTheme, setIsAltTheme] = useState(false);
     const [isMobile, setIsMobile] = useState(null);
     const [overlayVisible, setOverlayVisible] = useState(false);
-    const toggleOverlay = () => setOverlayVisible(!overlayVisible);
-    const closeMobileMenu = () => setOverlayVisible(false);
 
-    const handleScroll = () => {
+    const toggleOverlay = useCallback(() => setOverlayVisible(prev => !prev), []);
+    const closeMobileMenu = useCallback(() => setOverlayVisible(false), []);
+
+    const handleScroll = useCallback(() => {
         const currentScrollPosition = window.scrollY;
-        if (currentScrollPosition > scrollPosition) {
-            // Scrolling down
-            setIsNavbarVisible(false);
-        } else {
-            // Scrolling up
-            setIsNavbarVisible(true);
-        }
         setScrollPosition(currentScrollPosition);
-    };
-    
-      useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => {
-            window.removeEventListener("scroll", handleScroll);
-        };
     }, [scrollPosition]);
 
     useEffect(() => {
-        const handleResize = () => {
-          setIsMobile(window.innerWidth <= 768);
-        };
-        handleResize();
-        window.addEventListener("resize", handleResize);
-        return () => window.removeEventListener("resize", handleResize);
-      }, []);
+        const handleResize = () => setIsMobile(window.innerWidth <= 768);
+        const handleIntersection = ([entry]) => setIsAltTheme(entry.isIntersecting);
 
-
-    useEffect(() => {
         const workSection = document.getElementById('work');
-        const observer = new IntersectionObserver(
-          ([entry]) => {
-            if (entry.isIntersecting) {
-              setIsAltTheme(true);
-            } else {
-              setIsAltTheme(false);
-            }
-          },
-          {
-            threshold: 0.1,
-          }
-        );
-    
-        if (workSection) {
-          observer.observe(workSection);
-        }
-    
+        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.1 });
+
+        if (workSection) observer.observe(workSection);
+        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleResize);
+        
+        handleResize();
+
         return () => {
-          if (workSection) {
-            observer.unobserve(workSection);
-          }
+            if (workSection) observer.unobserve(workSection);
+            window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("resize", handleResize);
         };
-      }, []);
+    }, [handleScroll]);
 
-
-      if (isMobile === null) {
+    if (isMobile === null) {
         return (
             <nav className={`flex justify-between items-center px-[4vw] h-[6.2rem] tablet-s:h-[5rem] mobile:h-[4.2rem] top-0 sticky z-[100] 
-            ${isAltTheme ? "bg-softblack/80 duration-300 backdrop-blur-lg": "bg-white/80 duration-300 backdrop-blur-lg"}`}>
+                ${isAltTheme ? "bg-softblack/80 duration-300 backdrop-blur-lg" : "bg-white/80 duration-300 backdrop-blur-lg"}`}>
             </nav>
-        )
+        );
     }
 
-
-    function NavItem( {text, page, target} ) {
-        return (
-            <a href={page} target={target}>
-                <li className="text-[1.1rem] tablet-s:text-[1.5rem] px-2 py-1 cursor-pointer duration-300 hover:text-accent">{text}</li>
-            </a>
-        )
-    }
-
-    function MobileNavItem( {text, page} ) {
-        return (
-            <a href={page} onClick={closeMobileMenu}>
-                <h4 className="tablet-s:text-[1.5rem] tracking-wider px-2 py-1 cursor-pointer duration-300">{text}</h4>
-            </a>
-        )
-    }
-
-    return(
+    return (
         <>
             {isMobile ? (
-            <nav
-            className={`flex justify-between animate-fade items-center px-[4vw] h-[5rem] mobile:h-[4.2rem] sticky top-0 z-[100] ${
-              isAltTheme
-                ? "bg-softblack/80 backdrop-blur-lg"
-                : "bg-white/80 duration-300 backdrop-blur-lg"
-            }`}
-          >
-            {isAltTheme ? (
-              <Image
-                width={1000}
-                height={100}
-                alt="Visions to Visuals Logo z-[1000]"
-                className="w-[14rem] h-auto mobile:w-[13rem]"
-                src="/images/v2vinvert.png"
-              ></Image>
+                <MobileNavbar
+                    isAltTheme={isAltTheme}
+                    overlayVisible={overlayVisible}
+                    toggleOverlay={toggleOverlay}
+                    closeMobileMenu={closeMobileMenu}
+                />
             ) : (
-              <Image
-                width={1000}
-                height={100}
-                alt="Visions to Visuals Logo z-[1000]"
-                className="w-[14rem] h-auto mobile:w-[13rem]"
-                src="/images/v2vlogo.png"
-              ></Image>
-            )}
-  
-            <FontAwesomeIcon
-              icon={overlayVisible ? faXmark : faBars}
-              className={`cursor-pointer text-3xl z-10 ${
-                isAltTheme ? "text-white " : "text-black"
-              } ${overlayVisible ? "text-white" : "text-black"}`}
-              onClick={toggleOverlay}
-            />
-  
-            <div
-            className={`fixed top-0 left-0 w-full bg-softblack duration-[800ms] ease-in-out transform h-[100lvh] ${
-              overlayVisible ? "translate-y-0" : "-translate-y-full"
-            }`}
-            >
-                <ul
-              className={`flex flex-col gap-4 pl-[3rem] pt-[4rem] text-white font-[600] ${
-                overlayVisible ? "fade-in" : "fade-out"
-              }`}
-            >
-                <MobileNavItem text="Home" page="#home"></MobileNavItem>
-                <MobileNavItem text="Services" page="#services"></MobileNavItem>
-                <MobileNavItem text="Team" page="#team"></MobileNavItem>
-                <MobileNavItem text="Work" page="#work"></MobileNavItem>
-                {/* <MobileNavItem text="Pricing" page="#"></MobileNavItem> */}
-                <MobileNavItem text="Free Evaluation" page="https://calendly.com/contact-cbnc/v2v"></MobileNavItem>
-                </ul>
-            </div>
-          </nav>
-
-            ):( 
-            <nav className={`tablet-s:hidden animate-fade sticky z-[100] top-0 mx-auto right-0 left-0 py-[2rem] px-[6rem] max-w-[110rem] backdrop-blur-lg
-            transition-opacity ${isAltTheme ? "bg-softblack/80 duration-300": "bg-white/80 duration-300"}`}>
-
-                <div className="flex justify-between items-center">
-
-                {isAltTheme ? 
-                <Image width={1000} height={100} alt="Visions to Visuals Logo" className="w-[14rem] h-full" src="/images/v2vinvert.png"></Image>
-                : 
-                <Image width={1000} height={100} alt="Visions to Visuals Logo" className="w-[14rem] h-full" src="/images/v2vlogo.png"></Image>
-                }
-
-                    <ul className="flex items-center justify-center gap-[3rem]">
-                        <NavItem text="Home" page="#home" target=""></NavItem>
-                        <NavItem text="Services" page="#services" target=""></NavItem>
-                        <NavItem text="Team" page="#team" target=""></NavItem>
-                        <NavItem text="Work" page="#work" target=""></NavItem>
-                        {/* <NavItem text="Pricing" page=""></NavItem> */}
-                        <NavItem text="Free Evaluation" page="https://calendly.com/contact-cbnc/v2v" target="_blank"></NavItem>
-                    </ul>
-                </div>
-            </nav>
+                <DesktopNavbar isAltTheme={isAltTheme} />
             )}
         </>
-    )
+    );
 }

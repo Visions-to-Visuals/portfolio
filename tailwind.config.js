@@ -27,6 +27,7 @@ module.exports = {
       },
 
       animation:{
+        fadeIn1 : "translateY 200ms ease-in-out",
         fadeIn : "translateY 400ms ease-in-out",
         fadeLess: "fadeOpacity 550ms ease-in-out",
         fadeIn2 : "translateY 700ms ease-in-out",

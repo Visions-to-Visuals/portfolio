@@ -33,7 +33,7 @@ export default function Faq() {
                 <FaqItem 
                     question="How long does it usually take to complete a website?"
                     answer="The timeline for creating a website varies depending on the specific needs and complexity of the project. 
-                    Typically, the process takes about two months from start to finish. This includes everything from the initial 
+                    Typically, the process takes about 3 months from start to finish. This includes everything from the initial 
                     consultation and design to development and final revisions."
                 ></FaqItem>
 
@@ -64,6 +64,13 @@ export default function Faq() {
 
                 <FaqItem 
                     question="What happens if I need changes after the project is completed?"
+                    answer="Once your website is launched, we provide 30 days of complimentary support to ensure everything runs 
+                    smoothly at no extra cost. If you want us to modify the design or add new pages after launch, we are happy to help with these 
+                    changes, which will be discussed and charged separately."
+                ></FaqItem>
+
+                <FaqItem 
+                    question="What if I don't know what I need for my website?"
                     answer="Once your website is launched, we provide 30 days of complimentary support to ensure everything runs 
                     smoothly at no extra cost. If you want us to modify the design or add new pages after launch, we are happy to help with these 
                     changes, which will be discussed and charged separately."

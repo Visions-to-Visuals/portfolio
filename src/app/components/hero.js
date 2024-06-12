@@ -22,11 +22,11 @@ export default function Hero() {
             <div className="flex justify-center mt-[2rem] relative">
                 <button className="rounded-[1.5rem] animate-fadeIn2 bg-black px-[2.5rem] py-[.6rem] text-white text-center hover:bg-black/80 duration-200" onClick={handleWorkClick}>View our work</button>
 
-                <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/OrangeGlow.png"
-                className="absolute w-[52rem] tablet-s:hidden h-auto bottom-[-32rem] left-[0rem] z-[-1] animate-fade"></Image>
+                <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/Orange.png"
+                className="absolute w-[40rem] opacity-100 tablet-s:hidden h-auto bottom-[-28rem] left-[8rem] z-[-1] animate-fade"></Image>
 
-                <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/YellowGlow.png"
-                className="absolute w-[52rem] tablet-s:hidden h-auto bottom-[-21rem] right-[0rem] z-[-1] animate-fade"></Image>
+                <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/Yellow.png"
+                className="absolute w-[40rem] opacity-80 tablet-s:hidden h-auto bottom-[-14rem] right-[5rem] z-[-1] animate-fade"></Image>
             </div>
 
             <div className="flex justify-center mt-[4rem]">
