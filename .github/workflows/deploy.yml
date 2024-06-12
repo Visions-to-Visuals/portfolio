@@ -21,4 +21,4 @@ jobs:
             git pull
             npm i
             npm run build
-            pm2 restart nextjs-app
+            pm2 restart visionstovisuals
