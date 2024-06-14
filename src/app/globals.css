@@ -40,6 +40,8 @@
   --text-color: #000000; /* Default white */
   --accent-color: #EC512B; /* Default orange */
   --secondary-color: #F5BF49; /* Default yellow */
+
+  --nav-color: rgba(249, 249, 249, 0.8);
 }
 
 .alt-theme {
@@ -47,12 +49,16 @@
   --text-color: #F9F9F9; /* Alternate white */
   --accent-color: #EC512B; /* Alternate orange */
   --secondary-color: #F5BF49; /* Alternate yellow */
+
+  --nav-color: rgba(23, 25, 30, 0.8);
 }
 
 body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 500ms, color 500ms;
+  margin: 0;
+  padding: 0;
 }
 
 .text-accent {
@@ -72,7 +78,14 @@ body {
 }
 
 .navbar.alt-theme {
-  background-color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+.navbar {
+  background-color: var(--nav-color);
+  color: var(--text-color);
+  transition: background-color 500ms, color 500ms;
+  backdrop-filter: blur(10px);
 }
 
 *
@@ -85,12 +98,6 @@ html
 {
   font-size: 1rem;
   scroll-behavior: smooth;
-}
-
-body
-{
-  margin: 0;
-  padding: 0;
 }
 
 li
