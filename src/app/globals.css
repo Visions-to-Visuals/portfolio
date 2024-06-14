@@ -71,10 +71,6 @@ body {
   background-color: var(--secondary-color);
 }
 
-.navbar {
-  transition: background-color 500ms;
-}
-
 .navbar.alt-theme {
   background-color: var(--text-color);
 }
