@@ -22,16 +22,16 @@ export default function Hero() {
             <div className="flex justify-center mt-[2rem] relative">
                 <button className="rounded-[1.5rem] animate-fadeIn2 bg-black px-[2.5rem] py-[.6rem] text-white text-center hover:bg-black/80 duration-200" onClick={handleWorkClick}>View our work</button>
 
-                <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/Orange.png"
+                <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/HeroOrange.png"
                 className="absolute w-[40rem] opacity-100 tablet-s:hidden h-auto bottom-[-28rem] left-[8rem] z-[-1] animate-fade"></Image>
 
-                <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/Yellow.png"
+                <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/HeroYellow.png"
                 className="absolute w-[40rem] opacity-80 tablet-s:hidden h-auto bottom-[-14rem] right-[5rem] z-[-1] animate-fade"></Image>
             </div>
 
             <div className="flex justify-center mt-[4rem]">
                 <Image width={1000} height={1000} priority="true" alt="Images of website layouts" 
-                className="w-[75rem] tablet-s:w-[92%] h-auto z-[10] animate-fadeIn3" src="/images/HeroProjects.png"></Image>
+                className="w-[75rem] tablet-s:w-[92%] h-auto z-[10] animate-fadeIn3" src="/images/HeroPhoto.png"></Image>
             </div>
         </>
     );

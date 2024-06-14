@@ -27,16 +27,23 @@ module.exports = {
       },
 
       animation:{
+        fadeIn0 : "translate 300ms ease-in-out",
         fadeIn1 : "translateY 200ms ease-in-out",
         fadeIn : "translateY 400ms ease-in-out",
         fadeLess: "fadeOpacity 550ms ease-in-out",
         fadeIn2 : "translateY 700ms ease-in-out",
         fadeIn3 : "translateY 850ms ease-in-out",
         fade: "fadeIn 1.5s ease-in-out",
+        fade2: "fadeIn .5s ease-in-out",
         background: "fadeIn 1s ease-in-out",
       },
 
       keyframes: {
+
+        translate: {
+          '0%': { transform: 'translateY(10px)', opacity: '0' },
+          '100%': { transform: 'translateY(0px)', opacity: '1' },
+        },
 
         translateY: {
           '0%': { transform: 'translateY(20px)', opacity: '0' },

@@ -19,9 +19,9 @@ export default function Work() {
             <h1 className="text-[3.6rem] tablet-s:text-[2.5rem] text-center mx-auto mobile:text-[2rem] mobile:w-[85%] mobile:leading-[3rem] leading-[4.6rem] mt-[2rem] text-white">Our stunning collection of websites</h1>
 
             <div className="flex justify-center items-start mt-[4rem] mobile:mt-[2rem] relative gap-[2.5rem] tablet-s:flex-wrap">
-                <Image width={1000} height={1000} priority="true" alt="Images of website layouts" 
+                <Image width={1000} height={1000} alt="Images of website layouts" 
                 className="w-[34rem] tablet-s:w-[80%] h-auto mobile:w-[85%]" src="/images/Club.png"></Image>
-                <Image width={1000} height={1000} priority="true" alt="Images of website layouts" 
+                <Image width={1000} height={1000} alt="Images of website layouts" 
                 className="w-[36rem] tablet-s:w-[80%] h-auto mobile:w-[85%]" src="/images/ClubSite.png"></Image>
             </div>
 
@@ -31,7 +31,7 @@ export default function Work() {
             </div>
 
             <div className="flex justify-center items-start mt-[9rem] mobile:mt-[6rem] relative">
-                <Image width={1000} height={1000} priority="true" alt="Images of website layouts" 
+                <Image width={1000} height={1000} alt="Images of website layouts" 
                 className="w-[66rem] tablet-s:w-[80%] mobile:w-[85%] h-auto" src="/images/Construction.png"></Image>
             </div>
 
@@ -41,9 +41,9 @@ export default function Work() {
             </div>
 
             <div className="flex justify-center items-start mt-[9rem] mobile:mt-[6rem] relative gap-[2.5rem] tablet-s:flex-wrap">
-                <Image width={1000} height={1000} priority="true" alt="Images of website layouts" 
+                <Image width={1000} height={1000} alt="Images of website layouts" 
                 className="w-[35rem] tablet-s:w-[80%] mobile:w-[85%] h-auto z-[10]" src="/images/WreckingWheels.png"></Image>
-                <Image width={1000} height={1000} priority="true" alt="Images of website layouts" 
+                <Image width={1000} height={1000} alt="Images of website layouts" 
                 className="w-[35rem] tablet-s:w-[80%] mobile:w-[85%] h-auto z-[10]" src="/images/BrendenThompson.png"></Image>
             </div>
 

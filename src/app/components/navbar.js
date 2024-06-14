@@ -18,7 +18,7 @@ const Logo = memo(({ isAltTheme }) => (
 // NavItem Component
 const NavItem = memo(({ text, page, target }) => (
     <a href={page} target={target}>
-        <li className="text-[1.1rem] px-2 py-1 cursor-pointer duration-300 hover:text-accent">{text}</li>
+        <li className="text-[1.1rem] px-2 py-1 cursor-pointer hover:text-accent">{text}</li>
     </a>
 ));
 
@@ -31,7 +31,7 @@ const MobileNavItem = memo(({ text, page, onClick }) => (
 
 // MobileNavbar Component
 const MobileNavbar = ({ isAltTheme, overlayVisible, toggleOverlay, closeMobileMenu }) => (
-    <nav className={`flex justify-between animate-fade items-center px-[4vw] h-[5rem] mobile:h-[4.2rem] sticky top-0 z-[100] ${isAltTheme ? "bg-softblack/80 backdrop-blur-lg" : "bg-white/80 duration-300 backdrop-blur-lg"}`}>
+    <nav className={`navbar flex justify-between animate-fade2 items-center px-[4vw] h-[5rem] mobile:h-[4.2rem] sticky top-0 z-[100] transition-colors duration-[400ms]`}>
         <Logo isAltTheme={isAltTheme} />
         <FontAwesomeIcon
             icon={overlayVisible ? faXmark : faBars}
@@ -53,8 +53,8 @@ const MobileNavbar = ({ isAltTheme, overlayVisible, toggleOverlay, closeMobileMe
 
 // DesktopNavbar Component
 const DesktopNavbar = ({ isAltTheme }) => (
-    <nav className={`animate-fade sticky z-[100] top-0 mx-auto right-0 left-0 py-[2rem] px-[6rem] backdrop-blur-lg transition-opacity ${isAltTheme ? "bg-softblack/80 duration-300" : "bg-white/80 duration-300"}`}>
-        <div className="flex justify-between items-center">
+    <nav className={`navbar sticky z-[100] top-0 mx-auto right-0 left-0 py-[2rem] px-[6rem] backdrop-blur-lg transition-colors duration-[400ms]`}>
+        <div className="flex justify-between items-center animate-fadeIn0">
             <Logo isAltTheme={isAltTheme} />
             <ul className="flex items-center justify-center gap-[3rem]">
                 <NavItem text="Home" page="#home" target="" />
@@ -104,7 +104,7 @@ export default function Navbar() {
 
     if (isMobile === null) {
         return (
-            <nav className={`flex justify-between items-center px-[4vw] h-[6.2rem] tablet-s:h-[5rem] mobile:h-[4.2rem] top-0 sticky z-[100] 
+            <nav className={`navbar flex justify-between items-center px-[4vw] h-[6.2rem] tablet-s:h-[5rem] mobile:h-[4.2rem] top-0 sticky z-[100] 
                 ${isAltTheme ? "bg-softblack/80 duration-300 backdrop-blur-lg" : "bg-white/80 duration-300 backdrop-blur-lg"}`}>
             </nav>
         );

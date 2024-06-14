@@ -8,6 +8,8 @@ import Team from "./components/team";
 import Work from "./components/work";
 import Pricing from './components/pricing';
 import Faq from './components/faq';
+import { hotjar } from 'react-hotjar'
+
 
 export default function Home() {
 
@@ -36,6 +38,10 @@ export default function Home() {
       }
     };
   }, []);
+
+  useEffect(() => {
+    hotjar.initialize(5024968, 6)
+  }, [])
 
   return (
     <>
