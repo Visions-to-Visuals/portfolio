@@ -6,7 +6,6 @@ export const metadata = {
 };
 
 const HotjarSnippet = () => {
-  if (5024968) return null
   return (
     <div>
       <Script id="hotjar-snippet">
