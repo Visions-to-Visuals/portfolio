@@ -34,13 +34,13 @@ export default function Faq() {
                     question="How long does it usually take to complete a website?"
                     answer="The timeline for creating a website varies depending on the specific needs and complexity of the project. 
                     Typically, the process takes about 3 months from start to finish. This includes everything from the initial 
-                    consultation and design to development and final revisions."
+                    consultation and to the development and final revisions."
                 ></FaqItem>
 
                 <FaqItem 
-                    question="Do I have to pay the full price of the website upfront?"
-                    answer="No, we charge half the total price after the initial designs of the website are made. Once we finish the final 
-                    designs and move on to website development, the other half of the total price will be charged."
+                    question="Can you help me update an existing website?"
+                    answer="Absolutely! We can help revamp your site with the latest design trends and technologies. Get in touch with
+                    us and we’ll provide more detailed information on all the services we can provide for you."
                 ></FaqItem>
 
                 <FaqItem 
@@ -48,12 +48,6 @@ export default function Faq() {
                     answer="We understand that investing in a new website is a significant decision, and we are committed to delivering 
                     our best work to meet your expectations. However, due to the extensive time, effort, and resources invested in 
                     each project, we do not offer refunds once payment has been received."
-                ></FaqItem>
-
-                <FaqItem 
-                    question="Can you help me update an existing website?"
-                    answer="Absolutely! We can help revamp your site with the latest design trends and technologies. Get in touch with
-                    us and we’ll provide more detailed information on all the services we can provide for you."
                 ></FaqItem>
 
                 <FaqItem 

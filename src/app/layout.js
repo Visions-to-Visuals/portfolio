@@ -2,13 +2,13 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Visions to Visuals | Website Design and Development",
-  description: 'Welcome to Visions to Visuals, a professional web design and development company. We specialize in crafting stunning, user-friendly websites that elevate your brand’s digital presence and drive business growth. We understand that a website is more than just a digital brochure; it’s a powerful tool for engaging customers and enhancing your brand’s identity. We focus on delivering customized solutions that reflect your unique values and stories, ensuring an optimal user experience that boosts engagement and conversions. Contact us today to transform your vision into a visual reality.'
+  title: "Visions to Visuals - Trusted Partners for Website Design and Development",
+  description: 'High-quality reliable websites that elevate your digital presence. Your website is more than a digital brochure; it’s a powerful tool for engaging customers and enhancing your brand’s identity. We focus on delivering customized solutions that reflect your unique values and stories, ensuring an optimal user experience that boosts engagement and conversions.'
 };
 
 const HotjarSnippet = () => {
   return (
-    <div>
+    <>
       <Script id="hotjar-snippet">
         {`
           (function(h,o,t,j,a,r){
@@ -21,7 +21,7 @@ const HotjarSnippet = () => {
           })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
         `}
       </Script>
-    </div>
+    </>
   );
 };
 

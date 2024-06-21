@@ -9,7 +9,7 @@ export default function Design() {
         return(
             <div className="flex items-center gap-3">
                 <Image width={500} height={500} priority="true" alt="Checkmark icon" className="w-[1.1rem] h-[1rem]" src="/images/checkmark.png"></Image>
-                <h2 className="text-[1.2rem] tablet-s:text-[1.1rem]">{text}</h2>
+                <h2 className="text-[1.2rem] tablet-s:text-[1.1rem] mobile:text-[1.2rem]">{text}</h2>
             </div>
         )
     }
@@ -25,17 +25,17 @@ export default function Design() {
                     className="w-[30rem] h-fit z-[10] mobile:w-[85%] mx-auto" src="/images/Design.png"></Image>
                 </div>
 
-                <p className="text-[1.1rem] tablet-s:text-[1.0rem] mx-auto mt-[2rem] leading-8 w-[30rem] mobile:w-[85%]">{"Effective web design should not only capture your brand's values and your customers' needs, but also makes your site easy to use. Our crucial attention to UI helps visitors save time and enhances their overall experience. This not only attracts more customers but also boosts your credibility while significantly cutting down on unnecessary costs."}</p>
+                <p className="text-[1.1rem] tablet-s:text-[1.0rem] mobile:text-[1.2rem] mobile:leading-[200%] mx-auto mt-[2rem] leading-8 w-[30rem] mobile:w-[85%]">{"Effective web design should not only capture your brand's values and your customers' needs, but also makes your site easy to use. Our crucial attention to UI helps visitors save time and enhances their overall experience. This not only attracts more customers but also boosts your credibility while significantly cutting down on unnecessary costs."}</p>
 
-                <div className="flex flex-col gap-8 mobile:gap-6 mt-[3rem] mx-auto mobile:w-[85%]">
-                    <List text="Understand your goals and pain points."></List>
-                    <List text="Aesthetic color palettes and fonts."></List>
+                <div className="flex flex-col gap-8 mt-[3rem] mx-auto mobile:w-[85%]">
+                    <List text="Understand goals and pain points."></List>
+                    <List text="Aesthetic colors, styles, and fonts."></List>
                     <List text="User-centric experience and strategy."></List>
                     <List text="Reflect your brand and unique values."></List>
                 </div>
 
                 <a href="https://calendly.com/contact-cbnc/v2v" target="_blank">
-                    <button className="rounded-[1.5rem] mt-[4rem] bg-black px-[2.5rem] py-[.6rem] text-white text-center mobile:mx-[2rem] hover:bg-black/80 duration-200 tablet-s:scale-95 mobile:mt-[3rem]">Get a free evaluation</button>
+                    <button className="rounded-[1.5rem] mt-[4rem] bg-black px-[2.5rem] py-[.8rem] text-white text-center mobile:mx-[2rem] hover:bg-black/80 duration-200 mobile:mt-[4rem] mobile:text-[1.2rem]">Get a free evaluation</button>
                 </a>
             </div>
     
@@ -60,12 +60,12 @@ export default function Design() {
                     className="w-[30rem] h-fit z-[10] mobile:mx-auto mobile:w-[85%]" src="/images/Development.png"></Image>
                 </div>
 
-                <p className="text-[1.1rem] tablet-s:text-[1.0rem] mt-[2rem] leading-8 w-[30rem] mobile:mx-auto mobile:w-[85%]">{"Our development services ensure your site is responsive and high-performing across all devices. By optimizing website speed and functionality, we enhance user engagement to directly contribute to your business’s success. No matter the complexity of the website, we'll find the best solution to keep you and your visitors happy."}</p>
+                <p className="text-[1.1rem] tablet-s:text-[1.0rem] mobile:text-[1.2rem] mobile:leading-[200%] mt-[2rem] leading-8 w-[30rem] mobile:mx-auto mobile:w-[85%]">{"Our development services will make your site responsive and high-performing across all devices. By optimizing website speed and functionality, we enhance user engagement to directly contribute to your business’s success. No matter the complexity of the website, we'll find the best solution to keep you and your visitors happy."}</p>
 
-                <div className="flex flex-col gap-8 mobile:gap-6 mt-[3rem] mobile:w-[85%] mobile:mx-auto">
+                <div className="flex flex-col gap-8 mt-[3rem] mobile:w-[85%] mobile:mx-auto">
                     <List text="Code and no-code solutions."></List>
                     <List text="Responsive across all devices."></List>
-                    <List text="Databases, blogs, and newsletters."></List>
+                    <List text="Databases, blogs, and e-commerce."></List>
                     <List text="Optimized speed and performance."></List>
                     <List text="Search engine optimization."></List>
                     <List text="Web maintenance and support."></List>
