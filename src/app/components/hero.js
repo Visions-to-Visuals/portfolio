@@ -11,11 +11,11 @@ export default function Hero() {
             text-transparent">great</span> and perform <span className="bg-gradient-to-r from-[#EC512B] to-[#F5BF49] bg-clip-text 
             text-transparent">even better</span></h1>
 
-            <p className="text-[1.2rem] animate-fadeLess tablet-s:text-[1.1rem] text-center w-[40rem] tablet-s:w-[85%] mobile-s:w-[90%] tablet-s:px-[2rem] mobile:px-0 mx-auto mt-[1rem] leading-8 opacity-60">{"It's more than words and images. It's about creating a digital presence where your brand’s values and stories come to life."}</p>
+            <p className="text-[1.2rem] animate-fadeLess tablet-s:text-[1.1rem] text-center w-[40rem] tablet-s:w-[85%] mobile-s:w-[90%] tablet-s:px-[2rem] mobile:px-0 mx-auto mt-[1rem] leading-8 opacity-60 mobile:leading-[150%]">{"It's more than words and images. It's about creating a digital presence where your brand’s values and stories come to life."}</p>
 
-            <div className="flex justify-center mt-[2rem] relative">
+            <div className="flex justify-center mt-[3rem] relative">
                 <a href="https://calendly.com/contact-cbnc/v2v" target="_blank">
-                    <button className="rounded-[1.5rem] animate-fadeIn2 bg-black px-[2.5rem] py-[.8rem] text-white text-center hover:bg-black/80 duration-200">Get a free evaluation</button>
+                    <button className="rounded-[1.5rem] animate-fadeIn2 bg-black px-[2.5rem] py-[.8rem] text-white text-center hover:bg-black/80 duration-200 mobile:text-[1.1rem]">Get a free evaluation</button>
                 </a>
 
                 <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/HeroOrange.png"

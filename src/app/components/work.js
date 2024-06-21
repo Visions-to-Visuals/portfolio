@@ -7,7 +7,7 @@ export default function Work() {
 
     function Description({header, text}){
         return(
-            <div className="flex text-[1.2rem] gap-2 tablet-s:text-[1.1rem] mobile:text-[1.2rem] mobile:leading-[180%]">
+            <div className="flex text-[1.2rem] gap-2 tablet-s:text-[1.1rem] mobile:leading-[180%]">
                 <h2 className="">{header}</h2>
                 <p className="">{text}</p>
             </div>
