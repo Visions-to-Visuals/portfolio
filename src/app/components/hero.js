@@ -5,12 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Hero() {
 
-    const handleWorkClick = () => {
-        const workSection = document.getElementById('work');
-        if (workSection) {
-            workSection.scrollIntoView({ behavior: "smooth" });
-        }
-    }
     return(
         <>
             <h1 className="text-[3.6rem] tablet-s:text-[2.5rem] mobile:text-[2.2rem] mobile:leading-[3rem] tablet-s:px-[2rem] mobile-s:px-[1rem] animate-fadeIn tablet-s:leading-[3.5rem] text-center w-[58rem] tablet-s:w-auto mx-auto leading-[4.6rem] mt-[2rem]">We make websites that look <span className="bg-gradient-to-r from-[#EC512B] to-[#F5BF49] bg-clip-text 
@@ -20,7 +14,9 @@ export default function Hero() {
             <p className="text-[1.2rem] animate-fadeLess tablet-s:text-[1.1rem] text-center w-[40rem] tablet-s:w-[85%] mobile-s:w-[90%] tablet-s:px-[2rem] mobile:px-0 mx-auto mt-[1rem] leading-8 opacity-60">{"It's more than words and images. It's about creating a digital presence where your brand’s values and stories come to life."}</p>
 
             <div className="flex justify-center mt-[2rem] relative">
-                <button className="rounded-[1.5rem] animate-fadeIn2 bg-black px-[2.5rem] py-[.6rem] text-white text-center hover:bg-black/80 duration-200" onClick={handleWorkClick}>View our work</button>
+                <a href="https://calendly.com/contact-cbnc/v2v" target="_blank">
+                    <button className="rounded-[1.5rem] animate-fadeIn2 bg-black px-[2.5rem] py-[.8rem] text-white text-center hover:bg-black/80 duration-200">Get a free evaluation</button>
+                </a>
 
                 <Image width={850} height={850} priority="true" alt="Orange glow circle" src="/images/HeroOrange.png"
                 className="absolute w-[40rem] opacity-100 tablet-s:hidden h-auto bottom-[-28rem] left-[8rem] z-[-1] animate-fade"></Image>
