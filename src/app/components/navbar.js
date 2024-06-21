@@ -25,7 +25,7 @@ const NavItem = memo(({ text, page, target }) => (
 // MobileNavItem Component
 const MobileNavItem = memo(({ text, page, onClick }) => (
     <a href={page} onClick={onClick}>
-        <h4 className="text-[1.5rem] tracking-wider px-2 py-1 cursor-pointer duration-300">{text}</h4>
+        <h4 className="text-[1.8rem] tracking-wider px-2 py-1 cursor-pointer duration-300">{text}</h4>
     </a>
 ));
 
@@ -39,13 +39,13 @@ const MobileNavbar = ({ isAltTheme, overlayVisible, toggleOverlay, closeMobileMe
             onClick={toggleOverlay}
         />
         <div className={`fixed top-0 left-0 w-full bg-softblack duration-[800ms] ease-in-out transform h-[100lvh] ${overlayVisible ? "translate-y-0" : "-translate-y-full"}`}>
-            <ul className={`flex flex-col gap-4 pl-[3rem] pt-[4rem] text-white font-[600] ${overlayVisible ? "fade-in" : "fade-out"}`}>
-                <MobileNavItem text="Home" page="#home" onClick={closeMobileMenu} />
-                <MobileNavItem text="Services" page="#services" onClick={closeMobileMenu} />
-                <MobileNavItem text="Team" page="#team" onClick={closeMobileMenu} />
-                <MobileNavItem text="Work" page="#work" onClick={closeMobileMenu} />
+            <ul className={`flex flex-col gap-4 pl-[3rem] pt-[5rem] text-white font-[600] ${overlayVisible ? "fade-in" : "fade-out"}`}>
+                <MobileNavItem text="Home." page="#home" onClick={closeMobileMenu} />
+                <MobileNavItem text="Services." page="#services" onClick={closeMobileMenu} />
+                <MobileNavItem text="Team." page="#team" onClick={closeMobileMenu} />
+                <MobileNavItem text="Work." page="#work" onClick={closeMobileMenu} />
                 {/* <MobileNavItem text="Pricing" page="#"></MobileNavItem> */}
-                <MobileNavItem text="Free Evaluation" page="https://calendly.com/contact-cbnc/v2v" onClick={closeMobileMenu} />
+                <MobileNavItem text="Free Evaluation." page="https://calendly.com/contact-cbnc/v2v" onClick={closeMobileMenu} />
             </ul>
         </div>
     </nav>
