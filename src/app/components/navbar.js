@@ -45,7 +45,7 @@ const MobileNavbar = ({ isAltTheme, overlayVisible, toggleOverlay, closeMobileMe
                 <MobileNavItem text="Team." page="#team" onClick={closeMobileMenu} />
                 <MobileNavItem text="Work." page="#work" onClick={closeMobileMenu} />
                 {/* <MobileNavItem text="Pricing" page="#"></MobileNavItem> */}
-                <MobileNavItem text="Free Evaluation." page="https://calendly.com/contact-cbnc/v2v" onClick={closeMobileMenu} />
+                <MobileNavItem text="Free Evaluation." page="https://cal.com/visions2visuals/discovery" onClick={closeMobileMenu} />
             </ul>
         </div>
     </nav>
@@ -62,7 +62,7 @@ const DesktopNavbar = ({ isAltTheme }) => (
                 <NavItem text="Team" page="#team" target="" />
                 <NavItem text="Work" page="#work" target="" />
                 {/* <NavItem text="Pricing" page="" /> */}
-                <NavItem text="Free Evaluation" page="https://calendly.com/contact-cbnc/v2v" target="_blank" />
+                <NavItem text="Free Evaluation" page="https://cal.com/visions2visuals/discovery" target="_blank" />
             </ul>
         </div>
     </nav>

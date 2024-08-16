@@ -34,7 +34,7 @@ export default function Design() {
                     <List text="Reflect your brand and unique values."></List>
                 </div>
 
-                <a href="https://calendly.com/contact-cbnc/v2v" target="_blank">
+                <a href="https://cal.com/visions2visuals/discovery" target="_blank">
                     <button className="rounded-[1.5rem] mt-[4rem] bg-black px-[2.5rem] py-[.8rem] text-white text-center mobile:mx-[2rem] hover:bg-black/80 duration-200 mobile:mt-[4rem] mobile:text-[1.1rem]">Get a free evaluation</button>
                 </a>
             </div>
