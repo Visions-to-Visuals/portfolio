@@ -2,23 +2,24 @@ import "./globals.css";
 import Script from "next/script";
 
 export const metadata = {
-  title: "Visions to Visuals - Trusted Partners for Website Design and Development",
-  description: 'High-quality reliable websites that elevate your digital presence. Your website is more than a digital brochure; it’s a powerful tool for engaging customers and enhancing your brand’s identity. We focus on delivering customized solutions that reflect your unique values and stories, ensuring an optimal user experience that boosts engagement and conversions.'
+  title: "Visions to Visuals - Trusted Website Design & Development",
+  description: 'Visions to Visuals creates reliable websites that elevate your brand. Customized solutions with Visions to Visuals boost engagement and conversions.'
 };
 
-const HotjarSnippet = () => {
+const GoogleAnalyticsSnippet = () => {
   return (
     <>
-      <Script id="hotjar-snippet">
+      <Script 
+        src="https://www.googletagmanager.com/gtag/js?id=G-LETVVC7HP2"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
         {`
-          (function(h,o,t,j,a,r){
-              h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-              h._hjSettings={hjid:5024968,hjsv:6};
-              a=o.getElementsByTagName('head')[0];
-              r=o.createElement('script');r.async=1;
-              r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-              a.appendChild(r);
-          })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-LETVVC7HP2');
         `}
       </Script>
     </>
@@ -36,7 +37,7 @@ export default function RootLayout({ children }) {
     mobile:text-[.9rem]
     mobile-s:text-[.85rem]
     ">
-      <HotjarSnippet></HotjarSnippet>
+      <GoogleAnalyticsSnippet></GoogleAnalyticsSnippet>
       <body>{children}</body>
     </html>
   );
