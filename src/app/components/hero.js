@@ -14,7 +14,7 @@ export default function Hero() {
             <p className="text-[1.2rem] animate-fadeLess tablet-s:text-[1.1rem] text-center w-[40rem] tablet-s:w-[85%] mobile-s:w-[90%] tablet-s:px-[2rem] mobile:px-0 mx-auto mt-[1rem] leading-8 opacity-60 mobile:leading-[150%]">{"It's more than words and images. It's about creating a digital presence where your brand’s values and stories come to life."}</p>
 
             <div className="flex justify-center mt-[3rem] relative">
-                <a href="https://calendly.com/contact-cbnc/v2v" target="_blank">
+                <a href="https://cal.com/visions2visuals/discovery" target="_blank">
                     <button className="rounded-[1.5rem] animate-fadeIn2 bg-black px-[2.5rem] py-[.8rem] text-white text-center hover:bg-black/80 duration-200 mobile:text-[1.1rem]">Get a free evaluation</button>
                 </a>
 
