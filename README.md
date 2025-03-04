@@ -1,4 +1,3 @@
-
 # Visions-to-Visuals Portfolio
 
 A modern portfolio website built with Next.js, Tailwind CSS, and Vercel for deployment.
